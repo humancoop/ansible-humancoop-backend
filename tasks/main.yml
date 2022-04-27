@@ -9,6 +9,8 @@
       - recipient_email is defined
       - website_email is defined
       - website_email_password is defined
+      - aws_secret_access_key is defined
+      - aws_access_key_id is defined
 
 - name: Create app container
   docker_container:
@@ -32,3 +34,5 @@
       RECIPIENT_EMAIL: "{{ recipient_email }}"
       WEBSITE_EMAIL: "{{ website_email }}"
       WEBSITE_EMAIL_PASSWORD: "{{ website_email_password }}"
+      AWS_ACCESS_KEY_ID: "{{ aws_access_key_id }}"
+      AWS_SECRET_ACCESS_KEY: "{{ aws_secret_access_key }}"
